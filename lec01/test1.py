@@ -31,3 +31,18 @@ for i in range(row):
         for k in range(col - 1, -1, -1):
             print(f'{i * col + 1 + k:0>2}', end=' ')
     print()
+
+# 섭씨 화씨 구하기
+cTemp = float(input())
+fTemp = cTemp * 1.8 + 32
+
+print(f"섭씨: {cTemp}, 화씨: {fTemp}")
+
+# 넓이 부피 구하기
+PI = 3.141592
+r = float(input())
+
+ballVol = (r ** 3) * 4 / 3 * PI
+ballArea = (r ** 2) * 4 * PI
+
+print(f"구의 부피: {ballVol:.1f}, 구의 겉넓이: {ballArea:.1f}")
