@@ -11,6 +11,9 @@ print(tuNum1, tuNum2)
 print(list(tuNum1), list(tuNum2))
 
 # 2. set()
+num1 = [1, 2, 2, 3, 1, 3, 4]
+str1 = ['1', '2', '2', '3', 2, 4]
+print(set(num1), set(str1))
 setNum = {1, 2, 3}
 setNum.add(4)
 setNum.remove(1)
@@ -68,3 +71,6 @@ print(key, value)
 # key, value 한 쌍으로 튜플로 출력
 item = person.items()
 print(item)
+
+for key, val in person.items():
+    print(key, val)

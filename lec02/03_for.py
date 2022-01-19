@@ -42,13 +42,13 @@ for scores in midScores:
 print(subAvgs)
 
 # 학생별 평균점수 리스트
-# stuNum = len(midScores[0])
-# stuAvgs = []
+stuNum = len(midScores[0])
+stuAvgs = [0] * stuNum
 
-# for scores in midScores:
-#     for i, val in enumerate(scores):
-#         stuAvgs[i] += val / subNum
-# print(stuAvgs)
+for scores in midScores:
+    for i, val in enumerate(scores):
+        stuAvgs[i] += val / subNum
+print(stuAvgs)
 
 # 4. 문자열 반복
 for char in 'hello':
