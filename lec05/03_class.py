@@ -68,7 +68,7 @@ pprint(sys.path)
 # 특정 경로에 라이브러리를 만든경우
 # 경로를 추가해야함
 # sys.path.append(라이브러리경로)
-sys.path.append('C:\Desktop')
+sys.path.append('C:/Desktop')
 
 # os 모듈
 # 환경변수나 디렉토리, 파일 등의 os 자원을 제어할 수 있게 해주는 모듈
