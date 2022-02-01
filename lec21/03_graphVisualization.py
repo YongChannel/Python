@@ -8,8 +8,7 @@ import numpy as np
 
 # 그래프 그리기
 # 그래프 종류
-# (1) 꺽은선 그래프, (2) 수평선/수직선(보조선), (3) 막대 그래프
-# (4) 수평 막대그래프, (5) 산점도, (6) 히스토그램, (7) 에러바
+# (1) 꺽은선 그래프, (2) 수평선/수직선(보조선), (3) 막대 그래프 (4) 수평 막대그래프, (5) 산점도, (6) 히스토그램, (7) 에러바
 # (8) 파이차트, (9) 히트맵, (10) 박스플롯, (11) 바이올린 플롯
 
 # 꺽은선 그래프
@@ -97,7 +96,8 @@ plt.show()
 area = (30 * np.random.rand(n)) ** 2  # 점의 크기(면적)
 colors = np.random.rand(n)
 
-# plt.scatter(x, y, s=area, c=colors) #각 점의 색깔과 크기를 정함
+# 각 점의 색깔과 크기를 정함
+# plt.scatter(x, y, s=area, c=colors)
 plt.scatter(x, y, s=15 ** 2, c='y')
 plt.show()
 
@@ -135,7 +135,7 @@ plt.show()
 # bins : 구간 개수 지정
 min(weight), max(weight)
 
-# bins =10
+# bins = 10
 # 계급 크기 : 2.5 = (81-56)/10
 # 첫 계급구간 : 56~ 56+(81-56)/10 => 56 ~ 58.5
 plt.hist(weight, bins=10, label='bins=10')
@@ -380,7 +380,7 @@ axes[1][1].legend()  # 범례표시
 plt.show()
 
 # 하나의 ax 그래프 창에 두개의 그래프를 y축을 다르게해서 표시
-# 즉, y축이 왼쪽, 오른쪽 2개로 생성됨
+# y축이 왼쪽, 오른쪽 2개로 생성
 x = np.arange(0, 3)
 y1 = x + 2
 y2 = -x - 1
@@ -472,7 +472,7 @@ plt.plt(x1, y1, 'o-')
 
 import os
 
-path = './라이브러리/data'
+path = './lec21/save'
 if not os.path.exists(path): os.makedirs(path)
 
 plt.savefig(path + '/그래프1.png', dpi=200)  # dpi는 해상도(기본값 100)
