@@ -6,22 +6,17 @@ ko_df = pd.read_json('./save/한국_국민해외관광객_201001_202012.json')
 jp_df = pd.read_json('./save/일본_방한외래관광객_201001_202012.json')
 cn_df = pd.read_json('./save/중국_방한외래관광객_201001_202012.json')
 am_df = pd.read_json('./save/미국_방한외래관광객_201001_202012.json')
-ko_df.info()
-jp_df.info()
-cn_df.info()
-am_df.info()
 
 # 2010~2020년도 까지 년도별 출/입국자수 그래프 시각화
 
 # 년도별 출/입국자수 구해야함
 # 각 df 년도 칼럼 생성 -> 년도 기준으로 groupby 관광객수의 합계
 ko_df.head()  # 201001 (int)
-# int -> 문자열로 변경하고 앞에 4자리만 가져오기
+
 ko_df['년도'] = ko_df['날짜'].astype('str').str[:4]
 jp_df['년도'] = jp_df['날짜'].astype('str').str[:4]
 cn_df['년도'] = cn_df['날짜'].astype('str').str[:4]
 am_df['년도'] = am_df['날짜'].astype('str').str[:4]
-# astype():타입을 바꾸는 함수, .str : 문자열 처리 및 함수
 
 ko_df.head()
 

@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('./lec21/save/주요발생국가주간동향(4월2째주).csv', index_col='국가')
+df = pd.read_csv('./save/주요발생국가주간동향(4월2째주).csv', index_col='국가')
 df.head()
 
 X = df.index  # 국가명
@@ -43,5 +43,5 @@ plt.xlabel(xLabel)
 plt.ylabel(yLabel)
 plt.title(title)
 plt.xticks(fontsize=8)
-plt.savefig('./lec21/save/4월6일 국가별 코로나 발생건수.png', dpi=200)
+plt.savefig('./save/4월6일 국가별 코로나 발생건수.png', dpi=200)
 plt.show()
